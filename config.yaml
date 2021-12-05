@@ -2,6 +2,7 @@ app:
   name: "gin-basic-scaffold"
   mode: "dev"
   port: 8888
+  version: "0.1.0"
 log:
   level: "debug"
   filename: "web_app.log"
@@ -13,7 +14,7 @@ mysql:
   port: 3306
   user: "root"
   password: "123456"
-  dbname: "gin-basic-scaffold"
+  db_name: "gin-basic-scaffold"
   max_open_conns: 200
   max_idle_conns: 50
 redis:
