@@ -47,11 +47,22 @@ type RedisConfig struct {
 	PoolSize int    `mapstructure:"pool_size"`
 }
 
-func Init() (err error) {
-	viper.SetConfigName("config") // 指定配置文件名称（不需要带后缀）
-	viper.SetConfigType("yaml")   // 指定配置文件类型
-	viper.AddConfigPath(".")      // 指定查找配置文件的路径
-	err = viper.ReadInConfig()    // 读取配置信息
+func Init(filePath string) (err error) {
+	// 配置文件的两种方式
+	// 方式1： 直接指定配置文件路径（相对路径或绝对路径）
+	// 相对路径：相对执行的可执行文件的相对路径
+	// 绝对路径：系统中实际的文件路径
+	viper.SetConfigFile(filePath)
+
+	// 方式2：指定配置文件名和配置文件的位置，viper 自行查找可用的配置文件
+	// 配置文件名不需要带后缀
+	// 配置文件位置可配置多个
+
+	// viper.SetConfigName("config") // 指定配置文件名称（不需要带后缀）
+	// viper.SetConfigType("yaml")   // 指定配置文件类型
+	// viper.AddConfigPath(".")      // 指定查找配置文件的路径
+
+	err = viper.ReadInConfig() // 读取配置信息
 	if err != nil {
 		// 读取配置信息失败
 		fmt.Printf("viper.ReadInConfig() failed, err: %v\n", err)

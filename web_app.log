@@ -1,3 +1,5 @@
 {"level":"INFO","time":"2021-12-04T13:00:06.730+0800","caller":"gin-basic-scaffold/main.go:76","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2021-12-04T13:00:06.735+0800","caller":"gin-basic-scaffold/main.go:84","msg":"Server exiting"}
 {"level":"ERROR","time":"2021-12-05T14:26:27.514+0800","caller":"mysql/mysql.go:25","msg":"connect DB failed","error":"dial tcp 127.0.0.1:3306: connect: connection refused"}
+{"level":"INFO","time":"2021-12-05T15:25:15.085+0800","caller":"gin-basic-scaffold/main.go:76","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2021-12-05T15:25:15.092+0800","caller":"gin-basic-scaffold/main.go:84","msg":"Server exiting"}
